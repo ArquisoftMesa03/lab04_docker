@@ -1,0 +1,10 @@
+version: "3"
+services:
+  vuedocker:
+    build: .
+    # image: otreum/lab4graphREST:1
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
